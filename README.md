@@ -93,7 +93,7 @@ pip install cpplint # (Python3)
   ```
   sudo apt-get install libtbb-dev
   ```
-  * **Debian/Ubuntu (`gcc` and `clang`)**:
+  * **Fedora/CentOS/RHEL (`gcc` and `clang`)**:
   ```
   sudo dnf install libtbb.so.2
   ```
