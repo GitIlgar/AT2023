@@ -23,9 +23,13 @@ The following parallel programming technologies are considered in practice:
   
   Unsupported operating system!
   
-  * **Linux (`gcc` and `clang`)**:
+  * **Debian/Ubuntu (`gcc` and `clang`)**:
   ```
   sudo apt install cppcheck
+  ```
+  * **Fedora/CentOS/RHEL (`gcc` and `clang`)**:
+  ```
+  sudo dnf install cppcheck cmake
   ```
   * **MacOS (apple clang)**:
   ```
@@ -45,12 +49,19 @@ pip install cpplint # (Python3)
   
   [Installers link.](https://www.microsoft.com/en-us/download/details.aspx?id=57467) You have to install `msmpisdk.msi` and `msmpisetup.exe`.
   
-  * **Linux (`gcc` and `clang`)**:
+  * **Debian/Ubuntu (`gcc` and `clang`)**:
   ```
   sudo apt install mpich
   sudo apt install openmpi-bin
   sudo apt install libopenmpi-dev
   ```
+  * **Fedora/CentOS/RHEL (`gcc` and `clang`)**:
+  ```
+  sudo dnf install mpich
+  sudo dnf install openmpi-devel
+  sudo dnf install libomp-devel
+  ```
+
   * **MacOS (apple clang)**:
   ```
   brew install open-mpi
@@ -60,9 +71,13 @@ pip install cpplint # (Python3)
   
   `OpenMP` is included into `gcc` and `msvc`, but some components should be installed additionally:
   
-  * **Linux (`gcc` and `clang`)**:
+  * **Debian/Ubuntu (`gcc` and `clang`)**:
   ```
   sudo apt install libomp-dev
+  ```
+  * **Fedora/CentOS/RHEL (`gcc` and `clang`)**:
+  ```
+  sudo dnf install libomp-devel
   ```
   * **MacOS (apple clang)**: The system is completely unstable thus you are not recommended to use it with `OpenMP`!
   ```
@@ -74,9 +89,13 @@ pip install cpplint # (Python3)
   
   `CMake` installs `TBB` while you run `cmake` for that project on Windows.
   
-  * **Linux (`gcc` and `clang`)**:
+  * **Debian/Ubuntu (`gcc` and `clang`)**:
   ```
   sudo apt-get install libtbb-dev
+  ```
+  * **Debian/Ubuntu (`gcc` and `clang`)**:
+  ```
+  sudo dnf install libtbb.so.2
   ```
   * **MacOS (apple clang)**:
   ```
