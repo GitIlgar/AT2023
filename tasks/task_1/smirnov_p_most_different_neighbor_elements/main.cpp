@@ -11,7 +11,7 @@ using namespace std;
 TEST(most_different_vector_elements, can_find_the_right_answer) {
   int rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  vector<int> v(5);
+  std::vector<int> v(5);
 
   if (rank == 0) {
     v = getRandVect(5);
@@ -26,7 +26,7 @@ TEST(most_different_vector_elements, can_find_the_right_answer) {
 
 TEST(most_different_vector_elements, can_find_the_right_answer_with_small_vector) {
   int rank;
-  vector<int> v(3);
+  std::vector<int> v(3);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
   if (rank == 0) {
@@ -41,7 +41,7 @@ TEST(most_different_vector_elements, can_find_the_right_answer_with_small_vector
 }
 
 TEST(most_different_vector_elements, can_find_the_right_answer_with_big_vector) {
-  vector<int> v(100);
+  std::vector<int> v(100);
   int rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
@@ -57,7 +57,7 @@ TEST(most_different_vector_elements, can_find_the_right_answer_with_big_vector) 
 }
 
 TEST(most_different_vector_elements, can_find_the_answer_with_very_big_vector) {
-  vector<int> v(1000);
+  std::vector<int> v(1000);
   int rank;
 
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -74,7 +74,7 @@ TEST(most_different_vector_elements, can_find_the_answer_with_very_big_vector) {
 }
 
 TEST(most_different_vector_elements, can_find_the_right_answer_with_even_number_elements_vector) {
-  vector<int> v(7);
+  std::vector<int> v(7);
   int rank;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 

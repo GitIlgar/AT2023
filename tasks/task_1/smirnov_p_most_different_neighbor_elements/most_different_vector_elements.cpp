@@ -6,19 +6,18 @@
 #include "../../../modules/task_1/smirnov_p_most_different_neighbor_elements/most_different_vector_elements.h"
 #include "./mpi.h"
 
-using namespace std;
 
-vector<int> getRandVect(int n) {
-  random_device rd;
-  mt19937 mersenne(rd());
+std::vector<int> getRandVect(int n) {
+  std::random_device rd;
+  std::mt19937 mersenne(rd());
 
-  vector<int> vect;
+  std::vector<int> vect;
   for (int i = 0; i < n; i++)
     vect.push_back(mersenne() % 10);
   return vect;
 }
 
-int single_find(vector<int> v) {
+int single_find(std::vector<int> v) {
   if (v.size() - 1 < 2) {
     throw("small size of vector");
   }
@@ -52,7 +51,7 @@ int mpi_find(std::vector<int> v) {
     }
   }
 
-  vector<int> localvect(step + 1);
+  std::vector<int> localvect(step + 1);
 
   if (rank == 0) {
     localvect = std::vector<int>(v.begin(), v.begin() + step + rest + 1);
@@ -73,6 +72,5 @@ int mpi_find(std::vector<int> v) {
   MPI_Reduce(&localmax, &absmax, 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
   return absmax;
 }
-
 
 

@@ -5,10 +5,8 @@
 
 #include <vector>
 
-using namespace std;
-
-vector<int> getRandVect(int n);
-int single_find(vector<int> v);
-int mpi_find(vector<int> v);
+std::vector<int> getRandVect(int n);
+int single_find(std::vector<int> v);
+int mpi_find(std::vector<int> v);
 
 #endif  // MODULES_TASK_1_SMIRNOV_P_MOST_DIFFERENT_VECTOR_ELEMENTS_MOST_DIFFERENT_VECTOR_ELEMENTS_H_
