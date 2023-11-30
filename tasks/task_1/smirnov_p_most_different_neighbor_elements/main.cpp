@@ -1,4 +1,4 @@
-// Copyright 2019 Kornev Nikita
+// Copyright 2023 Smirnov Pavel
 
 #include <gtest-mpi-listener.hpp>
 #include <gtest/gtest.h>

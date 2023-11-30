@@ -1,10 +1,9 @@
-// Copyright 2019 Kornev Nikita
-
+// Copyright 2023 Smirnov Pavel
 #include <iostream>
 #include <cmath>
 #include <vector>
 #include <random>
-#include "../../../modules/task_1/kornev_n_most_different_vector_elements/most_different_vector_elements.h"
+#include "../../../modules/task_1/smirnov_p_most_different_neighbor_elements/most_different_vector_elements.h"
 #include "./mpi.h"
 
 using namespace std;
